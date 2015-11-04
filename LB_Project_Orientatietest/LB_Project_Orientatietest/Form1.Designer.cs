@@ -144,7 +144,9 @@
             this.cbNieuweVerhuring.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNieuweVerhuring.FormattingEnabled = true;
             this.cbNieuweVerhuring.Items.AddRange(new object[] {
-            "Feestzaal"});
+            "Feestzaal",
+            "Wandelschoenen",
+            "Tenniscourt"});
             this.cbNieuweVerhuring.Location = new System.Drawing.Point(6, 19);
             this.cbNieuweVerhuring.Name = "cbNieuweVerhuring";
             this.cbNieuweVerhuring.Size = new System.Drawing.Size(125, 21);
@@ -254,7 +256,9 @@
             this.cbNieuweVerkoop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNieuweVerkoop.FormattingEnabled = true;
             this.cbNieuweVerkoop.Items.AddRange(new object[] {
-            "Sterkedrank"});
+            "Sterkedrank",
+            "Frisdrank",
+            "Warmedrank"});
             this.cbNieuweVerkoop.Location = new System.Drawing.Point(6, 19);
             this.cbNieuweVerkoop.Name = "cbNieuweVerkoop";
             this.cbNieuweVerkoop.Size = new System.Drawing.Size(125, 21);
