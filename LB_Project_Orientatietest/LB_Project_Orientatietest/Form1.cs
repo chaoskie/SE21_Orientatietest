@@ -147,11 +147,11 @@ namespace LB_Project_Orientatietest
         }
         public void SaveLog(string filename)
         {
-            //sorteer de lijst
-            List<IInkomsten> returned = ad.Overzicht((BTWTarief)cbOverzichtBTW.SelectedValue);
-
             try
             {
+                //sorteer de lijst
+                List<IInkomsten> returned = ad.Overzicht((BTWTarief)cbOverzichtBTW.SelectedValue);
+
                 //maak een stream
                 var strm = new FileStream(filename, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 var writer = new StreamWriter(strm);
