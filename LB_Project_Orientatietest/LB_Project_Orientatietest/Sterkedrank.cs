@@ -23,7 +23,7 @@ namespace LB_Project_Orientatietest
         public Sterkedrank(int aantal)
             : base(aantal)
         {
-
+            base.Bedrag = base.Aantal * Prijs; 
         }
         //methods
         public override string ToString()

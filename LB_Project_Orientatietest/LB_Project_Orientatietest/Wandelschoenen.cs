@@ -24,10 +24,11 @@ namespace LB_Project_Orientatietest
         public Wandelschoenen(DateTime tijdstip, int urenVerhuurd)
             : base(tijdstip, urenVerhuurd)
         {
-            
+            base.Bedrag = base.UrenVerhuurd * PrijsPerUur;
         }
 
         //methods
+
         public override string ToString()
         {
             decimal totaal = base.UrenVerhuurd * PrijsPerUur;

@@ -18,6 +18,11 @@ namespace LB_Project_Orientatietest
             this.verkopen = new List<Verkoop>();
         }
         //methods
+
+        /// <summary>
+        /// controleer en voeg nieuwe verhuring toe
+        /// </summary>
+        /// <param name="verhuur">toe te voegen verhuring</param>
         public void VoegToe(Verhuur verhuur)
         {
             bool found = false;
@@ -37,11 +42,21 @@ namespace LB_Project_Orientatietest
                 verhuringen.Add(verhuur);
             }
         }
+        /// <summary>
+        /// voeg nieuwe verkoop toe
+        /// </summary>
+        /// <param name="verkoop">toe te voegen verkoop</param>
         public void VoegToe(Verkoop verkoop)
         {
             verkopen.Add(verkoop);
         }
 
+        /// <summary>
+        /// genereer overzicht van verschillende verhuringen binnen datum x en y
+        /// </summary>
+        /// <param name="van">start datum van overzicht</param>
+        /// <param name="tot">eind datum van te genereren overzicht</param>
+        /// <returns>interface lijst van verhuringen </returns>
         public List<IInkomsten> Overzicht(DateTime van, DateTime tot)
         {
             List<Verhuur> sortedList = verhuringen;
@@ -57,6 +72,11 @@ namespace LB_Project_Orientatietest
             }
             return LijstVanTot;
         }
+        /// <summary>
+        /// genereert specifieke lijst van verschillende btw-tarieven
+        /// </summary>
+        /// <param name="tarief">te zoeken tarief</param>
+        /// <returns>stuurt interface lijst terug van de verschillende btw-tarieven</returns>
         public List<IInkomsten> Overzicht(BTWTarief tarief)
         {
             List<IInkomsten> LijstTarieven = new List<IInkomsten>();

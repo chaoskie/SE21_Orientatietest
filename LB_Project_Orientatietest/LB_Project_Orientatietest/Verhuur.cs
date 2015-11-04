@@ -10,7 +10,7 @@ namespace LB_Project_Orientatietest
     {
         //fields
         public int UrenVerhuurd { get; set; }
-        public decimal Bedrag { get; set; } //todo >>return
+        public decimal Bedrag { get; set; }
         public DateTime Tijdstip { get; set; }
         public abstract BTWTarief BTWTarief {get;}
         public abstract decimal PrijsPerUur { get; }
@@ -20,6 +20,7 @@ namespace LB_Project_Orientatietest
         {
             this.Tijdstip = tijdstip;
             this.UrenVerhuurd = urenVerhuurd;
+            
         }
         //methods
         public override string ToString()

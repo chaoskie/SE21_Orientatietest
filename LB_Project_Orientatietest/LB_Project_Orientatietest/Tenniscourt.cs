@@ -23,7 +23,7 @@ namespace LB_Project_Orientatietest
         public Tenniscourt(DateTime tijdstip, int urenVerhuurd)
             : base(tijdstip, urenVerhuurd)
         {
-
+            base.Bedrag = base.UrenVerhuurd * PrijsPerUur;
         }
 
         //methods

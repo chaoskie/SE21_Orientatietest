@@ -23,12 +23,13 @@ namespace LB_Project_Orientatietest
         public Frisdrank(int aantal)
             : base(aantal)
         {
-
+            base.Bedrag = base.Aantal * Prijs; 
         }
         //methods
         public override string ToString()
         {
-            return string.Format("{0}: Frisdrank, prijs:{1:C}, BTW %:{2} ", base.ToString(), Prijs, BTWTarief);      
+            decimal totaal = base.Aantal * Prijs;
+            return string.Format("{0}: Frisdrank, prijs:{1:C}, BTW %:{2} ", base.ToString(), totaal, BTWTarief);     
         }
     }
 }
