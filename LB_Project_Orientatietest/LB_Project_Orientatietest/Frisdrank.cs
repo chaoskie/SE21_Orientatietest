@@ -9,9 +9,15 @@ namespace LB_Project_Orientatietest
     class Frisdrank : Verkoop
     {
         //fields
-        public abstract readonly BTWTarief BTWTarief = BTWTarief.Laag;
+        public override BTWTarief BTWTarief
+        {
+            get { return BTWTarief.Laag; }
+        }
 
-        public decimal Prijs { get; }
+        public override decimal Prijs
+        {
+            get { return (decimal)1.20; }
+        }
 
         //constr.
         public Frisdrank(int aantal)
@@ -22,7 +28,7 @@ namespace LB_Project_Orientatietest
         //methods
         public override string ToString()
         {
-            return string.Format("{0}: Frisdrank, prijs:{1:c}, BTW percentage:{2} ", base.ToString(), Prijs, BTWTarief);      
+            return string.Format("{0}: Frisdrank, prijs:{1:C}, BTW %:{2} ", base.ToString(), Prijs, BTWTarief);      
         }
     }
 }

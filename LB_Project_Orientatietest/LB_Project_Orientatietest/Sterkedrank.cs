@@ -9,9 +9,15 @@ namespace LB_Project_Orientatietest
     public class Sterkedrank : Verkoop
     {
         //fields
-        public abstract readonly BTWTarief BTWTarief = BTWTarief.Hoog;
+        public override BTWTarief BTWTarief
+        {
+            get { return BTWTarief.Hoog; }
+        }
 
-        public decimal Prijs { get; }
+        public override decimal Prijs
+        {
+            get { return (decimal)3.20; }
+        }
 
         //constr.
         public Sterkedrank(int aantal)
@@ -22,7 +28,8 @@ namespace LB_Project_Orientatietest
         //methods
         public override string ToString()
         {
-            return string.Format("{0}: Sterkedrank, prijs:{1:c}, BTW percentage:{2} ", base.ToString(), Prijs, BTWTarief);      
+            decimal totaal = base.Aantal * Prijs;
+            return string.Format("{0}: Sterkedrank, prijs:{1:C}, BTW %:{2} ", base.ToString(), totaal, BTWTarief);   
         }
     }
 }

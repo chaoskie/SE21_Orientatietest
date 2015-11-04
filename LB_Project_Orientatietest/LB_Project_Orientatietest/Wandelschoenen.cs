@@ -9,20 +9,29 @@ namespace LB_Project_Orientatietest
     class Wandelschoenen : Verhuur
     {
         //fields
-        public abstract readonly BTWTarief BTWTarief = BTWTarief.Laag;
-        public decimal PrijsPerUur { get; }
+     
+        public override BTWTarief BTWTarief
+        {
+            get { return BTWTarief.Laag; }
+        }
+
+        public override decimal PrijsPerUur 
+        {
+            get { return (decimal)10.00; } 
+        }
 
         //constr.
         public Wandelschoenen(DateTime tijdstip, int urenVerhuurd)
             : base(tijdstip, urenVerhuurd)
         {
-
+            
         }
 
         //methods
         public override string ToString()
         {
-            return string.Format("{0}: Wandelschoenen, p/u {1:c}, BTW percentage:{2} ", base.ToString(), PrijsPerUur, BTWTarief);            
+            decimal totaal = base.UrenVerhuurd * PrijsPerUur;
+            return string.Format("{0}: Wandelschoenen, Totaal:{1:C}, BTW %:{2} ", base.ToString(), totaal, BTWTarief);
         }
     }
 }

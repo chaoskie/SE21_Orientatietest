@@ -107,6 +107,7 @@
             this.btnNieuweVerhuringToevoegen.TabIndex = 3;
             this.btnNieuweVerhuringToevoegen.Text = "Toevoegen";
             this.btnNieuweVerhuringToevoegen.UseVisualStyleBackColor = true;
+            this.btnNieuweVerhuringToevoegen.Click += new System.EventHandler(this.btnNieuweVerhuringToevoegen_Click);
             // 
             // label1
             // 
@@ -157,7 +158,7 @@
             this.groupBox2.Controls.Add(this.lbVerhuringen);
             this.groupBox2.Location = new System.Drawing.Point(157, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(313, 133);
+            this.groupBox2.Size = new System.Drawing.Size(360, 133);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Verhuringen";
@@ -167,7 +168,7 @@
             this.lbVerhuringen.FormattingEnabled = true;
             this.lbVerhuringen.Location = new System.Drawing.Point(6, 19);
             this.lbVerhuringen.Name = "lbVerhuringen";
-            this.lbVerhuringen.Size = new System.Drawing.Size(300, 108);
+            this.lbVerhuringen.Size = new System.Drawing.Size(348, 108);
             this.lbVerhuringen.TabIndex = 4;
             // 
             // groupBox3
@@ -175,7 +176,7 @@
             this.groupBox3.Controls.Add(this.lbVerkopen);
             this.groupBox3.Location = new System.Drawing.Point(157, 151);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(313, 133);
+            this.groupBox3.Size = new System.Drawing.Size(360, 133);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Verkopen";
@@ -185,7 +186,7 @@
             this.lbVerkopen.FormattingEnabled = true;
             this.lbVerkopen.Location = new System.Drawing.Point(6, 19);
             this.lbVerkopen.Name = "lbVerkopen";
-            this.lbVerkopen.Size = new System.Drawing.Size(300, 108);
+            this.lbVerkopen.Size = new System.Drawing.Size(348, 108);
             this.lbVerkopen.TabIndex = 8;
             // 
             // groupBox4
@@ -219,6 +220,7 @@
             this.btnNieuweVerkoopToevoegen.TabIndex = 7;
             this.btnNieuweVerkoopToevoegen.Text = "Toevoegen";
             this.btnNieuweVerkoopToevoegen.UseVisualStyleBackColor = true;
+            this.btnNieuweVerkoopToevoegen.Click += new System.EventHandler(this.btnNieuweVerkoopToevoegen_Click);
             // 
             // label4
             // 
@@ -276,14 +278,14 @@
             this.groupBox5.Controls.Add(this.dtpOverzichtVan);
             this.groupBox5.Location = new System.Drawing.Point(12, 290);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(458, 88);
+            this.groupBox5.Size = new System.Drawing.Size(505, 88);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Overzichten";
             // 
             // btnOverzichtExporteer
             // 
-            this.btnOverzichtExporteer.Location = new System.Drawing.Point(326, 58);
+            this.btnOverzichtExporteer.Location = new System.Drawing.Point(343, 58);
             this.btnOverzichtExporteer.Name = "btnOverzichtExporteer";
             this.btnOverzichtExporteer.Size = new System.Drawing.Size(125, 23);
             this.btnOverzichtExporteer.TabIndex = 13;
@@ -292,7 +294,7 @@
             // 
             // btnOverzichtDatumbereik
             // 
-            this.btnOverzichtDatumbereik.Location = new System.Drawing.Point(6, 58);
+            this.btnOverzichtDatumbereik.Location = new System.Drawing.Point(23, 58);
             this.btnOverzichtDatumbereik.Name = "btnOverzichtDatumbereik";
             this.btnOverzichtDatumbereik.Size = new System.Drawing.Size(285, 23);
             this.btnOverzichtDatumbereik.TabIndex = 11;
@@ -302,7 +304,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(323, 16);
+            this.label7.Location = new System.Drawing.Point(340, 16);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 10;
@@ -316,7 +318,7 @@
             "Ongespecificeerd",
             "Laag",
             "Hoog"});
-            this.cbOverzichtBTW.Location = new System.Drawing.Point(326, 31);
+            this.cbOverzichtBTW.Location = new System.Drawing.Point(343, 31);
             this.cbOverzichtBTW.Name = "cbOverzichtBTW";
             this.cbOverzichtBTW.Size = new System.Drawing.Size(125, 21);
             this.cbOverzichtBTW.TabIndex = 12;
@@ -324,7 +326,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(163, 16);
+            this.label6.Location = new System.Drawing.Point(180, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(23, 13);
             this.label6.TabIndex = 9;
@@ -336,7 +338,7 @@
             this.dtpOverzichtTot.CalendarTitleForeColor = System.Drawing.Color.AliceBlue;
             this.dtpOverzichtTot.CustomFormat = "dd-MM-yyyy HH:mm";
             this.dtpOverzichtTot.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpOverzichtTot.Location = new System.Drawing.Point(166, 32);
+            this.dtpOverzichtTot.Location = new System.Drawing.Point(183, 32);
             this.dtpOverzichtTot.Name = "dtpOverzichtTot";
             this.dtpOverzichtTot.Size = new System.Drawing.Size(125, 20);
             this.dtpOverzichtTot.TabIndex = 10;
@@ -345,7 +347,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 16);
+            this.label5.Location = new System.Drawing.Point(23, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 7;
@@ -357,7 +359,7 @@
             this.dtpOverzichtVan.CalendarTitleForeColor = System.Drawing.Color.AliceBlue;
             this.dtpOverzichtVan.CustomFormat = "dd-MM-yyyy HH:mm";
             this.dtpOverzichtVan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpOverzichtVan.Location = new System.Drawing.Point(6, 32);
+            this.dtpOverzichtVan.Location = new System.Drawing.Point(23, 32);
             this.dtpOverzichtVan.Name = "dtpOverzichtVan";
             this.dtpOverzichtVan.Size = new System.Drawing.Size(125, 20);
             this.dtpOverzichtVan.TabIndex = 9;
@@ -367,7 +369,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 388);
+            this.ClientSize = new System.Drawing.Size(529, 388);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);

@@ -10,9 +10,9 @@ namespace LB_Project_Orientatietest
     {
         //fields
         public int UrenVerhuurd { get; set; }
-        public decimal Bedrag { get; }
+        public decimal Bedrag { get; set; } //todo >>return
         public DateTime Tijdstip { get; set; }
-        public abstract BTWTarief BTWTarief { get; }
+        public abstract BTWTarief BTWTarief {get;}
         public abstract decimal PrijsPerUur { get; }
 
         //constr.
@@ -24,7 +24,7 @@ namespace LB_Project_Orientatietest
         //methods
         public override string ToString()
         {
-            return "Te verhuren";
+            return Tijdstip.ToString("dd/MM/yyyy");
         }
     }
 }

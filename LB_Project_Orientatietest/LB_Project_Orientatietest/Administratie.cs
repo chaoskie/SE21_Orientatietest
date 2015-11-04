@@ -9,8 +9,8 @@ namespace LB_Project_Orientatietest
     class Administratie
     {
         //fields
-        List<Verkoop> verkopen;
-        List<Verhuur> verhuringen;
+        public List<Verkoop> verkopen;
+        public List<Verhuur> verhuringen;
         //constr.
         public Administratie()
         {
@@ -20,11 +20,26 @@ namespace LB_Project_Orientatietest
         //methods
         public void VoegToe(Verhuur verhuur)
         {
-            //todo
+            bool found = false;
+            foreach (Verhuur v in verhuringen)
+            {
+                if (verhuur == v)
+                {
+                    found = true;
+                }
+            }
+            if (found)
+            {
+                System.Windows.Forms.MessageBox.Show("Deze verhuring is identiek aan een bestaande vehuring.");
+            }
+            else
+            {
+                verhuringen.Add(verhuur);
+            }
         }
         public void VoegToe(Verkoop verkoop)
         {
-            //todo
+            verkopen.Add(verkoop);
         }
     }
 }

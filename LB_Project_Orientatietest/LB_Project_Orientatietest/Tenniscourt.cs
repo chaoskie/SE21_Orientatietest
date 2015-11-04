@@ -9,8 +9,15 @@ namespace LB_Project_Orientatietest
     class Tenniscourt : Verhuur
     {
         //fields
-        public abstract readonly BTWTarief BTWTarief = BTWTarief.Laag;
-        public decimal PrijsPerUur { get; }
+        public override BTWTarief BTWTarief
+        {
+            get { return BTWTarief.Laag; }
+        }
+
+        public override decimal PrijsPerUur
+        {
+            get { return (decimal)35.00; }
+        }
 
         //constr.
         public Tenniscourt(DateTime tijdstip, int urenVerhuurd)
@@ -22,7 +29,8 @@ namespace LB_Project_Orientatietest
         //methods
         public override string ToString()
         {
-            return string.Format("{0}: Tenniscourt, p/u {1:c}, BTW percentage:{2} ", base.ToString(), PrijsPerUur, BTWTarief);            
+            decimal totaal = base.UrenVerhuurd * PrijsPerUur;
+            return string.Format("{0}: Tenniscourt, Totaal:{1:C}, BTW %:{2} ", base.ToString(), totaal, BTWTarief);
         }
     }
 }

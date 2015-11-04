@@ -8,8 +8,8 @@ namespace LB_Project_Orientatietest
 {
     public interface IInkomsten
     {
-        public Decimal Bedrag { get; }
-        public BTWTarief BTWTarief { get; }
-        public DateTime Tijdstip { get; }
+        Decimal Bedrag { get; }
+        BTWTarief BTWTarief { get; }
+        DateTime Tijdstip { get; }
     }
 }
