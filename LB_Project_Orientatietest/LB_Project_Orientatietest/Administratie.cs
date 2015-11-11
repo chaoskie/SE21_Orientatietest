@@ -9,6 +9,7 @@ namespace LB_Project_Orientatietest
     class Administratie
     {
         //fields
+        // Gebruik de IInkomsten, niet apart.
         public List<Verkoop> verkopen;
         public List<Verhuur> verhuringen;
         //constr.
@@ -25,8 +26,16 @@ namespace LB_Project_Orientatietest
         /// <param name="verhuur">toe te voegen verhuring</param>
         public void VoegToe(Verhuur verhuur)
         {
+            // Het idee om te controleren of het verhuren kan, is goed
+            // De uitwerking niet:
+            //   met == ga je exacte objecten vergelijken
+            // Beter, voor een verhuring, zou zijn om op TYPE te controleren
+            // en vervolgens op starttijd en aantal uren verhuurd.
+            // Je moet er wel vanuit gaan dat er van elk type slechts 1 in het 
+            // systeem kan verhuurd worden, anders wordt het een heel deel
+            // moeilijker.
             bool found = false;
-            foreach (Verhuur v in verhuringen)
+            foreach (Verhuur v in verhuringen) // Lambda eens bekijken!
             {
                 if (verhuur == v)
                 {
@@ -61,7 +70,7 @@ namespace LB_Project_Orientatietest
         {
             List<Verhuur> sortedList = verhuringen;
             sortedList.Sort((x, y) => x.Tijdstip.CompareTo(y.Tijdstip));
-            sortedList.Reverse();
+            // Vermijd deze statement: sortedList.Reverse();
             List<IInkomsten> LijstVanTot = new List<IInkomsten>();
             foreach (Verhuur v in sortedList)
             {
@@ -81,7 +90,13 @@ namespace LB_Project_Orientatietest
         {
             List<IInkomsten> LijstTarieven = new List<IInkomsten>();
             List<Verkoop> sortedList = verkopen;
+             // de = statement kopieert de referentie naar de verzameling
+             // die maakt GEEN nieuwe verzameling met dezelfde referenties
+             // naar de objecten erin.
 
+            // Gemeenschappelijke code buiten de switch plaatsen
+            // kijk ook eens naar de filter methode die je bij lambda kunt
+            // gebruiken.
             switch (tarief)
             {
                 case BTWTarief.Ongespecificeerd:
@@ -113,6 +128,9 @@ namespace LB_Project_Orientatietest
                 default:
                     return LijstTarieven;
             }
+
+            // sorteren
+            // teruggeven
         }
     }
 }

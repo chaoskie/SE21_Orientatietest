@@ -145,6 +145,8 @@ namespace LB_Project_Orientatietest
                 SaveLog(sfDiag.FileName);
             }
         }
+        // TODO verantwoordelijkheden in de juiste klasses onderbrengen.
+        // 
         public void SaveLog(string filename)
         {
             BTWTarief btw = BTWTarief.Ongespecificeerd;
